@@ -1,7 +1,7 @@
 pip==24.2
 streamlit==1.37.1
 
-plotly==5.11.0
+plotly==5.23.0
 XlsxWriter==3.1.0
 openpyxl==3.1.2
 numpy==2.0.1

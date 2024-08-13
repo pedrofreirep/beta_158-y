@@ -37,7 +37,7 @@ conn = st.connection('s3', type=FilesConnection)
 
 @st.cache_data(ttl=3600, show_spinner="1/3 - Carregando base completa (142 MB)...") #Ler base com a classificação TUSS da ANS
 def get_data_1():
-    return conn.read("df-for-mvps/17/158/mai-2024/df_append_all.csv", input_format="csv")
+    return conn.read("df-for-mvps/17/158/jun-2024/df_append_all.csv", input_format="csv")
 #     return pd.read_csv("../dados/df_append_all.csv")
 
 df_append_all = get_data_1()
@@ -45,14 +45,14 @@ df_append_all = get_data_1()
 
 @st.cache_data(ttl=3600, show_spinner="2/3 - Analisando procedimentos...") #Ler base com a classificação TUSS da ANS
 def get_data_3():
-    return conn.read("df-for-mvps/17/158/mai-2024/proc_describe.csv", input_format="csv")
+    return conn.read("df-for-mvps/17/158/jun-2024/proc_describe.csv", input_format="csv")
 #     return pd.read_csv('/Users/pedro/Documents/Blue/ds/df_sulamerica_describe.csv')
     
 proc_describe = get_data_3()
 
-# df_append_all = conn.read("df-for-mvps/17/158/mai-2024/df_append_all.csv", input_format="csv")
-# df_append = conn.read("df-for-mvps/17/158/mai-2024/df_append.csv", input_format="csv")
-# proc_describe = conn.read("df-for-mvps/17/158/mai-2024/proc_describe.csv", input_format="csv")
+# df_append_all = conn.read("df-for-mvps/17/158/jun-2024/df_append_all.csv", input_format="csv")
+# df_append = conn.read("df-for-mvps/17/158/jun-2024/df_append.csv", input_format="csv")
+# proc_describe = conn.read("df-for-mvps/17/158/jun-2024/proc_describe.csv", input_format="csv")
 
 proc_describe = proc_describe.iloc[1:]
 

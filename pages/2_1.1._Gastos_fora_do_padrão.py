@@ -22,14 +22,14 @@ conn = st.connection('s3', type=FilesConnection)
 
 @st.cache_data(ttl=3600, show_spinner="1/4 - Carregando base completa...") #Ler base com a classificação TUSS da ANS
 def get_data_1():
-    return conn.read("df-for-mvps/17/158/mai-2024/df_append_all.csv", input_format="csv")
+    return conn.read("df-for-mvps/17/158/jun-2024/df_append_all.csv", input_format="csv")
 #     return pd.read_csv("../dados/df_append_all.csv")
 
 df_append_all = get_data_1()
 
 # @st.cache_data(ttl=3600, show_spinner="2/4 - Carregando histórico...") #Ler base com a classificação TUSS da ANS
 # def get_data_2():
-#     return conn.read("df-for-mvps/17/158/mai-2024/df_append.csv", input_format="csv")
+#     return conn.read("df-for-mvps/17/158/jun-2024/df_append.csv", input_format="csv")
 # #     return pd.read_csv('../dados/df_append.csv')
     
 # df_append = get_data_2()

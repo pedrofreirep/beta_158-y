@@ -73,7 +73,7 @@ st.sidebar.markdown("# Analisando o padrão do preço de procedimentos")
 
 st.markdown('Cada sinistro, é avaliado pelo gasto médio e desvio padrão do valor pago para cada provedor. Dessa forma, são assinalados neste tópico sinistros que, apresentaram gastos maiores do que soma entre a média e desvio padrão do respectivo procedimento para o mesmo provedor, multiplicado ainda pela VCMH acumulada do último ano.')
 
-filter_date = st.sidebar.selectbox(label='Selecione o período', options=[ '2023', '2022'])
+filter_date = st.sidebar.selectbox(label='Selecione o período', options=[ '2024', '2023'])
 
 if filter_date == 'Mar/2023':
     min_date = pd.to_datetime('2023-03-01')

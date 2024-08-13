@@ -755,7 +755,7 @@ if total > 0:
 	
 	if filter_date == '2024':
 		if filter_insurance == 'SulAmérica':
-			st.caption('Status das variáveis de auditoria em 2022')
+			st.caption('Status das variáveis de auditoria em 2024')
 			st.plotly_chart(fig, use_container_width=True)
 
 	if filter_date == '2023':
@@ -799,4 +799,4 @@ if total > 0:
 	st.markdown('Provedores sem qualquer identificação, como CNPJ ou CRM, os quais impossibilitam rastrear a fonte do serviço prestado são classificados neste tópico.')
 	'\n\n'
 else:
-    st.info('Nenhum alerta de potencial fraude foi encontrado para esse período. **A Blue te avisará se algo diferente acontecer.**', icon="🌟")
+    st.info('Os dados ainda estão atualizando. **A Blue te avisará dos resultados quando estiverem prontos.**', icon="🔔")

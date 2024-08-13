@@ -17,7 +17,7 @@ st.set_page_config(
 
 # st.cache_resource.clear()
 
-conn = st.experimental_connection('s3', type=FilesConnection)
+conn = st.connection('s3', type=FilesConnection)
 
 @st.cache_data(ttl=3600, show_spinner="1/4 - Carregando base completa...") #Ler base com a classificação TUSS da ANS
 def get_data_1():
